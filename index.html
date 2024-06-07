@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="icon" href="./img/pokeball.png">
+</head>
+
+<body onload="render()">
+
+    <header>
+        <div class="menu">
+            <img src="./img/pokeball.png" alt="Pokeball" weight="40" height="40">
+            <H1>Pokedex</H1>
+        </div>
+        <div>
+            <input oninput="searchPokemon()" id="searchInput" type="text" placeholder="Pokemon suche...">
+        </div>
+    </header>
+    <div class="seperator"></div>
+    <section class="contantSection">
+        <div id="content" class="content"></div>
+        <div class="morePokemon">
+            <button id="loadMorePokemon" class="loadMorePokemon" onclick="loadMorePokemon()">Weitere Pokemon</button>
+        </div>
+    </section>
+    <footer>
+        <img src="./img/pikachu.png" alt="Pikachu" width="70" height="70">
+        <span>Pokemon</span>
+    </footer>
+    <div class="popUp">
+        <div id="pokemonModal" class="modal">
+            <span class="close" onclick="closeModal()">X</span>
+            <div id="pokemonDetails"></div>
+        </div>
+    </div>
+    <script src="templates.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
